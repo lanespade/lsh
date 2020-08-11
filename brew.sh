@@ -9,3 +9,9 @@ brew reinstall fzf
 brew reinstall ripgrep
 brew reinstall fd
 brew reinstall bat
+
+echo 'Configuring brews'
+$(brew --prefix)/opt/fzf/install --all
+
+echo 'Installing casks'
+brew cask install font-fira-code
