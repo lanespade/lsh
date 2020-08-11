@@ -47,7 +47,7 @@ alias gss=forgit::stash::show
 alias gst='git status'
 alias l='ls -lAhG'
 
-# Ctrl-F (Find in Files)
+# Ctrl-f (Find in Files)
 RG_PREFIX='rg --column --line-number --no-heading --color=always --smart-case '
 INITIAL_QUERY=''
 FZF_DEFAULT_COMMAND="$RG_PREFIX '$INITIAL_QUERY' $HOME"
@@ -66,7 +66,7 @@ find-in-files() {
 zle -N find-in-files
 bindkey '^f' find-in-files
 
-# Ctrl-X (Kill Process)
+# Ctrl-x (Kill Process)
 fkill() {
     local pid 
     if [ "$UID" != "0" ]; then
