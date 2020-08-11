@@ -14,10 +14,10 @@ rm -rf lsh
 ```
 
 ## Configure Terminal Font
-Image TBD
+![Fira Code](https://user-images.githubusercontent.com/5313372/89879464-daffa680-db77-11ea-92e9-7a932c105f6d.png)
 
 ## Enable Terminal Meta Key
-Image TBD
+![Meta Key](https://user-images.githubusercontent.com/5313372/89879446-d4712f00-db77-11ea-9f3c-29b884ecfc3c.png)
 
 # Installation Breakdown (install.sh)
 
