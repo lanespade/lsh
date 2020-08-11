@@ -4,8 +4,8 @@ set -Eeuo pipefail
 echo '==== brew ===='
 sh brew.sh
 
-echo '==== fd ===='
-sh fd.sh
+echo '==== ignore ===='
+sh ignore.sh
 
 echo '==== zsh ===='
 sh zsh.sh
