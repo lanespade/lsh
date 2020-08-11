@@ -7,6 +7,11 @@ A minimal, effective shell environment
 # TL;DR
 
 ## Install Dependencies
+
+**Warning**
+
+The following will install npm packages, homebrews, homebrew casks, and will replace ~/.zshrc, ~/.ignore, and ~/.nvmrc without asking 
+
 ```
 git clone https://github.com/lanespade/lsh.git
 ./lsh/install.sh
