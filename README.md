@@ -37,10 +37,7 @@ Installs Homebrew and the following...
 	* **font-fira-code** - primarily for [spaceship-prompt](https://github.com/denysdovhan/spaceship-prompt)
 
 ## ignore.sh
-Copies `.ignore` under the home directory (used by `fd` and `fzf`)
-
-## zsh.sh
-Copies `.zshrc` under the home directory and sources it
+Copies `.ignore` under the home directory (used by `fd` and `rg`)
 
 ## nvm.sh
 Installs `nvm` and creates a `.nvmrc` under the home directory with 'stable' as its contents
@@ -51,6 +48,9 @@ Installs `nvm` and creates a `.nvmrc` under the home directory with 'stable' as 
 	* **diff-so-fancy** - prettier git diff visuals than the built in defaults, combined with [forgit](https://github.com/wfxr/forgit)
 * configurations
 	* **git** - for **diff-so-fancy** core configuration, whitespace preference, and recommended colors
+
+## zsh.sh
+Copies `.zshrc` under the home directory and sources it
 
 # Shell Breakdown (.zshrc)
 
