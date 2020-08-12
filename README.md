@@ -4,13 +4,13 @@ A minimal, effective shell environment
 * zsh
 * Mac
 
-# TL;DR
+# tl;dr
 
 ## Install Dependencies
 
 **Warning**
 
-The following will install npm packages, homebrews, homebrew casks, and will replace ~/.zshrc, ~/.ignore, and ~/.nvmrc without asking 
+The following will install nvm, npm, npm packages, homebrew, homebrews, homebrew casks, and will replace ~/.zshrc, ~/.ignore, and ~/.nvmrc without asking.
 
 ```
 git clone https://github.com/lanespade/lsh.git
@@ -29,23 +29,23 @@ rm -rf lsh
 ## brew.sh
 Installs Homebrew and the following...
 * brews
-	* **fzf** - fuzzy finder, incredibly powerful and useful tool, the bedrock of my environment
-	* **ripgrep** - `grep` that respects `.gitignore` and is faster, happy to remove when `grep` catches up
-	* **fd** - same as `grep` but for `find`
-	* **bat** - like `cat`, but with syntax highlighting, extremely useful when combined with `fzf` previews
+	* **[fzf](https://github.com/junegunn/fzf)** - fuzzy finder, an incredibly powerful tool, the bedrock of my environment
+	* **[ripgrep](https://github.com/BurntSushi/ripgrep)** - faster `grep` that respects `~/.ignore` and `.gitignore` files
+	* **[fd](https://github.com/sharkdp/fd)** - faster `find` that respects `~/.ignore` and `.gitignore` files
+	* **[bat](https://github.com/sharkdp/bat)** - `cat` with syntax highlighting, useful for previewing contents with `fzf`
 * casks
-	* **font-fira-code** - primarily for [spaceship-prompt](https://github.com/denysdovhan/spaceship-prompt)
+	* **[font-fira-code](https://github.com/tonsky/FiraCode)** - support for [spaceship-prompt](https://github.com/denysdovhan/spaceship-prompt)
 
 ## ignore.sh
 Copies `.ignore` under the home directory (used by `fd` and `rg`)
 
 ## nvm.sh
-Installs `nvm` and creates a `.nvmrc` under the home directory with 'stable' as its contents
+Installs `nvm` and creates a `.nvmrc` containing 'stable' under the home directory
 
 ## npm.sh
 * packages
-	* **spaceship-prompt** - minimal prompt with command durations, git integration, etc.
-	* **diff-so-fancy** - prettier git diff visuals than the built in defaults, combined with [forgit](https://github.com/wfxr/forgit)
+	* **[spaceship-prompt](https://github.com/denysdovhan/spaceship-prompt)** - minimal, beautiful prompt with git integration
+	* **[diff-so-fancy](https://github.com/so-fancy/diff-so-fancy)** - improved git diffs, useful when combined with [forgit](https://github.com/wfxr/forgit)
 * configurations
 	* **git** - for **diff-so-fancy** core configuration, whitespace preference, and recommended colors
 
