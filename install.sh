@@ -7,11 +7,11 @@ sh brew.sh
 echo '==== ignore ===='
 sh ignore.sh
 
-echo '==== zsh ===='
-sh zsh.sh
-
 echo '==== nvm ===='
 sh nvm.sh
 
 echo '==== npm ===='
 sh npm.sh
+
+echo '==== zsh ===='
+sh zsh.sh
