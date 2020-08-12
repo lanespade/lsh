@@ -1,5 +1,5 @@
 #!/bin/bash
-set -Eeuo pipefail
+set -euxo pipefail
 
 echo 'Copying .ignore'
 cp -f $(dirname $0)/.ignore $HOME

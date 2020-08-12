@@ -1,5 +1,5 @@
 #!/bin/zsh
-set -Eeuo pipefail
+set -euxo pipefail
 
 echo 'Copying .zshrc'
 cp $(dirname $0)/.zshrc $HOME/.zshrc

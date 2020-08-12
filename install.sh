@@ -1,5 +1,5 @@
 #!/bin/zsh
-set -Eeuo pipefail
+set -euxo pipefail
 
 echo '==== brew ===='
 sh brew.sh
