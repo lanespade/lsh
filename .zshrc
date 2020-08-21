@@ -30,20 +30,23 @@ zstyle ':completion:*' fzf-search-display true # Allow searching display strings
 # Interactive Git (via FZF)
 source <(curl -sSL https://raw.githubusercontent.com/wfxr/forgit/master/forgit.plugin.zsh)
 
-# Aliases
-alias ga=forgit::add
+# Forgit Aliases
+# ga - Interactive git add selector
+# gcf - Interactive git checkout <file> selector
+# gclean - Interactive git clean selector
+# gd - Interactive git diff viewer
+# gi - Interactive .gitignore generator
+# glo - Interactive git log viewer
+# grh - Interactive git reset HEAD <file> selector
+# gss - Interactive git stash viewer
+
+# Custom Aliases
 alias gc='git commit -m'
-alias gcl=forgit::clean
 alias gcm='git checkout master'
 alias gco='git checkout'
-alias gd=forgit::diff
 alias gl='git pull'
-alias glg=forgit::log
 alias gp='git push'
-alias gr=forgit::restore
 alias grbm='git rebase master'
-alias grh=forgit::reset::head
-alias gss=forgit::stash::show
 alias gst='git status'
 alias l='ls -lAhG'
 
