@@ -16,14 +16,19 @@ project_or_home_dir() {
 }
 
 FZF_PREVIEW_DEFAULTS='--bind left:preview-page-up,right:preview-page-down --preview-window up:99%'
-export FZF_ALT_C_COMMAND="fd --type d --follow --hidden . $HOME"
+export FZF_ALT_C_COMMAND="fd --type d --hidden . $HOME"
 export FZF_ALT_C_OPTS="$FZF_PREVIEW_DEFAULTS --preview 'tree -C {}'"
 
-export FZF_DEFAULT_COMMAND="fd --type f --follow --hidden . ${project_or_home_dir}"
+export FZF_DEFAULT_COMMAND="fd --type f --hidden . $(project_or_home_dir)"
 export FZF_DEFAULT_OPTS="--layout default --info inline --multi"
 
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_CTRL_T_OPTS="--no-height $FZF_PREVIEW_DEFAULTS --preview 'bat --color always --style full --line-range 1: {}'"
+
+function chpwd() {
+    export FZF_DEFAULT_COMMAND="fd --type f --hidden . $(project_or_home_dir)"
+    export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+}
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
