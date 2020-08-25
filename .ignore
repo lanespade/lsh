@@ -1,4 +1,5 @@
 /Library
+.git
 google-cloud-sdk
 tags
 node_modules

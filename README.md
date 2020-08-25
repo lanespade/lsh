@@ -10,7 +10,7 @@ A minimal, effective shell environment
 
 **Warning**
 
-The following will install nvm, npm, npm packages, homebrew, homebrews, homebrew casks, and will replace ~/.zshrc, ~/.ignore, and ~/.nvmrc without asking.
+The following will install nvm, npm, npm packages, homebrew, homebrews, homebrew casks, clone zsh plugins into ~/.zsh/, and will replace ~/.zshrc, ~/.ignore, and ~/.nvmrc without asking.
 
 ```
 git clone https://github.com/lanespade/lsh.git
@@ -57,35 +57,23 @@ Copies `.zshrc` under the home directory and sources it
 ## # Custom Prompt
 Loads spaceship-prompt
 
-### Why not [pure](https://github.com/sindresorhus/pure) or [starship](https://github.com/starship/starship)?
-While I like the goal of cross-shell, I chose **spaceship-prompt** because it was designed for my target shell (zsh)... and it has the most stars
-
 ## # Auto Suggestions
-Nice to have, Ctrl-R like shadow functionality, that I find often useful as I am not always so quick to bring up real Ctrl-R
-
-### Why are you not using a package manager or referencing a locally cloned repo?
-`source <(curl ...)` is definitely not the best practice, so I will most likely update `zsh.sh` to clone this repo (and a couple more that I "install" in the same way) under `~/.zsh/` and source from there
+Nice to have, Ctrl-R like shadow functionality that I find useful as I am not always so quick to bring up Ctrl-R
 
 ## # NVM
 Standard NVM block, to load and enable auto completion
 
 ## # FZF
-Opinionated, minimal configuration of the built-in `fzf` keybindings, Alt-C and Ctrl-T, and its defaults
+Opinionated, minimal configuration of the `fzf` keybindings, Alt-C, Ctrl-R, and Ctrl-T
 
 ### Alt-C
 Finds directories starting at the home directory using `fd` while previewing contents using `tree`
 
-### Defaults (including Ctrl-R)
-Finds files starting at the home directory using `fd` above the cursor using 40% of the screen
-
 ### Ctrl-T
-Finds files starting at the home directory using `fd` in fullscreen mode while previewing contents using `bat`
+Finds files starting in the project directory or home directory (if not in a project) using `fd` in fullscreen mode while previewing contents using `bat`
 
-## # FZF Completion
-Enables `fzf` fuzzy filtering for all tab completions, immensely powerful, like having `man` open at all times
-
-### Why not [fzf-tab](https://github.com/Aloxaf/fzf-tab)?
-I tried both and they both seem to work, but **fzf-tab** didn't install as cleanly (due to zsh-ls-colors) and seemed to conflict with **zsh-autosuggestions** (order matters in `.zshrc`)
+## # FZF Tab
+Enables `fzf` fuzzy filtering for all tab completions, immensely powerful
 
 ## # Interactive Git (via FZF)
 **forgit** is a great tool built on top of `fzf` to add interactivity around git commands

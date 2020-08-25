@@ -3,7 +3,7 @@ autoload -U promptinit; promptinit
 prompt spaceship
 
 # Auto Suggestions
-source <(curl -sSL https://raw.githubusercontent.com/zsh-users/zsh-autosuggestions/master/zsh-autosuggestions.zsh)
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
@@ -11,12 +11,16 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # FZF
+project_or_home_dir() {
+	git rev-parse --show-toplevel 2> /dev/null || echo $HOME
+}
+
 FZF_PREVIEW_DEFAULTS='--bind left:preview-page-up,right:preview-page-down --preview-window up:99%'
-export FZF_ALT_C_COMMAND="fd --type d . $HOME"
+export FZF_ALT_C_COMMAND="fd --type d --follow --hidden . $HOME"
 export FZF_ALT_C_OPTS="$FZF_PREVIEW_DEFAULTS --preview 'tree -C {}'"
 
-export FZF_DEFAULT_COMMAND="fd --type f . $HOME"
-export FZF_DEFAULT_OPTS="--layout default --info inline -m"
+export FZF_DEFAULT_COMMAND="fd --type f --follow --hidden . ${project_or_home_dir}"
+export FZF_DEFAULT_OPTS="--layout default --info inline --multi"
 
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_CTRL_T_OPTS="--no-height $FZF_PREVIEW_DEFAULTS --preview 'bat --color always --style full --line-range 1: {}'"
@@ -24,11 +28,10 @@ export FZF_CTRL_T_OPTS="--no-height $FZF_PREVIEW_DEFAULTS --preview 'bat --color
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # FZF Completion
-source <(curl -sSL https://raw.githubusercontent.com/lincheney/fzf-tab-completion/master/zsh/fzf-zsh-completion.sh)
-zstyle ':completion:*' fzf-search-display true # Allow searching display strings as well
+source ~/.zsh/fzf-tab/fzf-tab.plugin.zsh
 
 # Interactive Git (via FZF)
-source <(curl -sSL https://raw.githubusercontent.com/wfxr/forgit/master/forgit.plugin.zsh)
+source ~/.zsh/forgit/forgit.plugin.zsh
 
 # Forgit Aliases
 # ga - Interactive git add selector
