@@ -12,11 +12,11 @@ export NVM_DIR="$HOME/.nvm"
 
 # FZF
 project_or_current_dir() {
-	git rev-parse --show-toplevel 2> /dev/null || echo .
+	git rev-parse --show-toplevel 2> /dev/null || pwd
 }
 
 FZF_PREVIEW_DEFAULTS='--bind left:preview-page-up,right:preview-page-down --preview-window up:99%'
-export FZF_ALT_C_COMMAND='fd --type d --hidden . .'
+export FZF_ALT_C_COMMAND="fd --type d . $HOME"
 export FZF_ALT_C_OPTS="$FZF_PREVIEW_DEFAULTS --preview 'tree -C {}'"
 
 export FZF_DEFAULT_COMMAND="fd --type f --hidden . $(project_or_current_dir)"
