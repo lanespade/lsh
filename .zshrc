@@ -49,10 +49,12 @@ source ~/.zsh/forgit/forgit.plugin.zsh
 # gss - Interactive git stash viewer
 
 # Custom Aliases
-alias gc='git commit -m'
+alias gb='git branch'
+alias gc='git commit'
 alias gcm='git checkout master'
 alias gco='git checkout'
 alias gl='git pull'
+alias gm='git merge'
 alias gp='git push'
 alias grbm='git rebase master'
 alias gst='git status'
