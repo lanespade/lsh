@@ -43,11 +43,7 @@ Copies `.ignore` under the home directory (used by `fd` and `rg`)
 Installs `nvm` and creates a `.nvmrc` containing 'stable' under the home directory
 
 ## npm.sh
-* packages
-	* **[spaceship-prompt](https://github.com/denysdovhan/spaceship-prompt)** - minimal, beautiful prompt with git integration
-	* **[diff-so-fancy](https://github.com/so-fancy/diff-so-fancy)** - improved git diffs, useful when combined with [forgit](https://github.com/wfxr/forgit)
-* configurations
-	* **git** - for **diff-so-fancy** core configuration, whitespace preference, and recommended colors
+Installs **[spaceship-prompt](https://github.com/denysdovhan/spaceship-prompt)**, a minimal, beautiful prompt with git integration
 
 ## zsh.sh
 Copies `.zshrc` under the home directory and sources it
