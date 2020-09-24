@@ -7,9 +7,6 @@ sh brew.sh
 echo '==== ignore ===='
 sh ignore.sh
 
-echo '==== nvm ===='
-sh nvm.sh
-
 echo '==== npm ===='
 sh npm.sh
 
