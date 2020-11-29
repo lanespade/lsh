@@ -41,7 +41,8 @@ Installs Homebrew and the following...
 Copies `.ignore` under the home directory (used by `rg` and `fd`)
 
 ## npm.sh
-Installs NVM (via **[zsh-nvm](https://github.com/lukechilds/zsh-nvm)**), resets ~/.nvmrc to stable, and installs the following packages...
+Installs NVM (via **[zsh-nvm](https://github.com/lukechilds/zsh-nvm)**), resets ~/.nvmrc to stable, and installs the following...
+* global packages
 	* **[spaceship-prompt](https://github.com/denysdovhan/spaceship-prompt)**, a minimal, beautiful prompt with git integration
 
 ## zsh.sh
