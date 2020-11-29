@@ -2,16 +2,24 @@
 set -Eeuo pipefail
 
 echo 'Installing zsh-autosuggestions'
-rm -rf ~/.zsh/zsh-autosuggestions
-git clone --depth 1 https://github.com/zsh-users/zsh-autosuggestions.git ~/.zsh/zsh-autosuggestions
+ZSH_AUTOSUGGESTIONS_PLUGIN_DIR=~/.zsh/zsh-autosuggestions
+rm -rf $ZSH_AUTOSUGGESTIONS_PLUGIN_DIR
+git clone --depth 1 https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_AUTOSUGGESTIONS_PLUGIN_DIR
 
 echo 'Installing fzf-tab'
-rm -rf ~/.zsh/fzf-tab
-git clone --depth 1 https://github.com/Aloxaf/fzf-tab ~/.zsh/fzf-tab
+FZF_TAB_PLUGIN_DIR=~/.zsh/fzf-tab
+rm -rf $FZF_TAB_PLUGIN_DIR
+git clone --depth 1 https://github.com/Aloxaf/fzf-tab $FZF_TAB_PLUGIN_DIR
 
 echo 'Installing forgit'
-rm -rf ~/.zsh/forgit
-git clone --depth 1 https://github.com/wfxr/forgit.git ~/.zsh/forgit
+FORGIT_PLUGIN_DIR=~/zsh/forgit
+rm -rf $FORGIT_PLUGIN_DIR
+git clone --depth 1 https://github.com/wfxr/forgit.git $FORGIT_PLUGIN_DIR
+
+echo 'Installing zsh-syntax-highlighting'
+ZSH_SYNTAX_HIGHLIGHTING_PLUGIN_DIR
+rm -rf $ZSH_SYNTAX_HIGHLIGHTING_PLUGIN_DIR
+git clone --depth 1 https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_SYNTAX_HIGHLIGHTING_PLUGIN_DIR
 
 echo 'Copying .zshrc'
 cp $(dirname $0)/.zshrc $HOME/.zshrc

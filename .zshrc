@@ -1,14 +1,14 @@
+# NVM
+export NVM_AUTO_USE=true
+export NVM_COMPLETION=true
+source ~/.zsh/zsh-nvm/zsh-nvm.plugin.zsh
+
 # Custom Prompt
 autoload -U promptinit; promptinit
 prompt spaceship
 
 # Auto Suggestions
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-# NVM
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # FZF
 project_or_current_dir() {
@@ -96,3 +96,6 @@ fkill() {
 
 zle -N fkill
 bindkey '^x' fkill
+
+# ZSH Syntax Highlighting
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

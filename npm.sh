@@ -1,22 +1,17 @@
 #!/bin/zsh
-set -uxo pipefail
+set -euxo pipefail
 
-echo 'Unistalling previous global packages'
-nvm use system
-npm u -g spaceship-prompt
+echo 'Ensuring ~/.zshrc exists'
+touch ~/.zshrc
+
+echo 'Configuring ~/.nvmrc'
+echo 'stable' > ~/.nvmrc
 
 echo 'Installing nvm'
-rm -rf ~/.nvm
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | zsh
-
-echo 'Installing default'
-echo 'stable' >  $HOME/.nvmrc
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-nvm install
-
-echo 'Setting Default'
-nvm use
+ZSH_NVM_PLUGIN_DIR=~/.zsh/zsh-nvm
+rm -rf $ZSH_NVM_PLUGIN_DIR
+git clone --depth 1 https://github.com/lukechilds/zsh-nvm.git $ZSH_NVM_PLUGIN_DIR
+source $ZSH_NVM_PLUGIN_DIR/zsh-nvm.plugin.zsh
 
 echo 'Installing global packages'
-npm i -g spaceship-prompt
+npm i -fg spaceship-prompt
