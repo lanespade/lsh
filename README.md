@@ -33,22 +33,24 @@ Installs Homebrew and the following...
 	* **[ripgrep](https://github.com/BurntSushi/ripgrep)** - faster `grep` that respects `~/.ignore` and `.gitignore` files
 	* **[fd](https://github.com/sharkdp/fd)** - faster `find` that respects `~/.ignore` and `.gitignore` files
 	* **[bat](https://github.com/sharkdp/bat)** - `cat` with syntax highlighting, useful for previewing contents with `fzf`
+	* **tree** - recursive `ls` with depth-indentation, useful for navigating with `fzf`
 * casks
 	* **[font-fira-code](https://github.com/tonsky/FiraCode)** - support for [spaceship-prompt](https://github.com/denysdovhan/spaceship-prompt)
 
 ## ignore.sh
-Copies `.ignore` under the home directory (used by `fd` and `rg`)
-
-## nvm.sh
-Installs `nvm` and creates a `.nvmrc` containing 'stable' under the home directory
+Copies `.ignore` under the home directory (used by `rg` and `fd`)
 
 ## npm.sh
-Installs **[spaceship-prompt](https://github.com/denysdovhan/spaceship-prompt)**, a minimal, beautiful prompt with git integration
+Installs NVM (via **[zsh-nvm](https://github.com/lukechilds/zsh-nvm)**), resets ~/.nvmrc to stable, and installs the following packages...
+	* **[spaceship-prompt](https://github.com/denysdovhan/spaceship-prompt)**, a minimal, beautiful prompt with git integration
 
 ## zsh.sh
 Copies `.zshrc` under the home directory and sources it
 
 # Shell Breakdown (.zshrc)
+
+## # NVM
+Configures the zsh-nvm plugin to call `nvm use` whenever a directory changes to switch NPM versions, enables auto completion and loads the plugin
 
 ## # Custom Prompt
 Loads spaceship-prompt
@@ -56,17 +58,14 @@ Loads spaceship-prompt
 ## # Auto Suggestions
 Nice to have, Ctrl-R like shadow functionality that I find useful as I am not always so quick to bring up Ctrl-R
 
-## # NVM
-Standard NVM block, to load and enable auto completion
-
 ## # FZF
 Opinionated, minimal configuration of the `fzf` keybindings, Alt-C, Ctrl-R, and Ctrl-T
 
 ### Alt-C
-Finds directories starting at the home directory using `fd` while previewing contents using `tree`
+Finds directory to change to by name, starting at the home directory using `fd` while previewing contents using `tree`
 
 ### Ctrl-T
-Finds files starting in the project directory or home directory (if not in a project) using `fd` in fullscreen mode while previewing contents using `bat`
+Finds file by name, starting in either the current project's root directory or home directory (if not in a project) using `fd` in fullscreen mode while previewing contents using `bat`
 
 ## # FZF Tab
 Enables `fzf` fuzzy filtering for all tab completions, immensely powerful
