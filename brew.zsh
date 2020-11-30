@@ -1,5 +1,5 @@
 #!/bin/zsh
-set -euxo pipefail
+set -Eeuxo pipefail
 
 echo 'Installing homebrew'
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"

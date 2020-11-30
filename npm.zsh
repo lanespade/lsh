@@ -1,5 +1,5 @@
 #!/bin/zsh
-set -euxo pipefail
+set -Eeuxo pipefail
 
 echo 'Ensuring ~/.zshrc exists'
 touch ~/.zshrc
