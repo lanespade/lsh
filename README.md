@@ -8,7 +8,7 @@ A minimal, effective shell environment
 
 **Warning**
 
-The following will install nvm, lts npm, npm packages, homebrew, homebrews, homebrew casks, clone zsh plugins into ~/.zsh/, and will replace ~/.zshrc, ~/.ignore, and ~/.nvmrc without asking.
+The following will install nvm, LTS npm, npm packages, homebrew, homebrews, homebrew casks, clone zsh plugins into `~/.zsh/`, and will replace `~/.zshrc`, `~/.ignore`, and `~/.nvmrc` without asking.
 
 ## Install Dependencies
 
