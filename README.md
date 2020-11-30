@@ -4,13 +4,13 @@ A minimal, effective shell environment
 * zsh
 * Mac
 
-# tl;dr
-
-## Install Dependencies
+# Installation
 
 **Warning**
 
-The following will install nvm, npm, npm packages, homebrew, homebrews, homebrew casks, clone zsh plugins into ~/.zsh/, and will replace ~/.zshrc, ~/.ignore, and ~/.nvmrc without asking.
+The following will install nvm, lts npm, npm packages, homebrew, homebrews, homebrew casks, clone zsh plugins into ~/.zsh/, and will replace ~/.zshrc, ~/.ignore, and ~/.nvmrc without asking.
+
+## Install Dependencies
 
 ```
 git clone https://github.com/lanespade/lsh.git
@@ -45,7 +45,7 @@ Installs NVM (via **[zsh-nvm](https://github.com/lukechilds/zsh-nvm)**), resets 
 * global packages
 	* **[spaceship-prompt](https://github.com/denysdovhan/spaceship-prompt)**, a minimal, beautiful prompt with git integration
 
-## zsh.zsh
+## zshrc.zsh
 Copies `.zshrc` under the home directory and sources it
 
 # Shell Breakdown (.zshrc)
