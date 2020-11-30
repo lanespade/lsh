@@ -14,7 +14,7 @@ The following will install nvm, npm, npm packages, homebrew, homebrews, homebrew
 
 ```
 git clone https://github.com/lanespade/lsh.git
-./lsh/install.sh
+./lsh/install.zsh
 rm -rf lsh
 ```
 
@@ -24,9 +24,9 @@ rm -rf lsh
 ## Enable Terminal Meta Key
 ![Meta Key](https://user-images.githubusercontent.com/5313372/89879446-d4712f00-db77-11ea-9f3c-29b884ecfc3c.png)
 
-# Installation Breakdown (install.sh)
+# Installation Breakdown (install.zsh)
 
-## brew.sh
+## brew.zsh
 Installs Homebrew and the following...
 * brews
 	* **[fzf](https://github.com/junegunn/fzf)** - fuzzy finder, an incredibly powerful tool, the bedrock of my environment
@@ -37,15 +37,15 @@ Installs Homebrew and the following...
 * casks
 	* **[font-fira-code](https://github.com/tonsky/FiraCode)** - support for [spaceship-prompt](https://github.com/denysdovhan/spaceship-prompt)
 
-## ignore.sh
+## ignore.zsh
 Copies `.ignore` under the home directory (used by `rg` and `fd`)
 
-## npm.sh
+## npm.zsh
 Installs NVM (via **[zsh-nvm](https://github.com/lukechilds/zsh-nvm)**), resets ~/.nvmrc to stable, and installs the following...
 * global packages
 	* **[spaceship-prompt](https://github.com/denysdovhan/spaceship-prompt)**, a minimal, beautiful prompt with git integration
 
-## zsh.sh
+## zsh.zsh
 Copies `.zshrc` under the home directory and sources it
 
 # Shell Breakdown (.zshrc)
