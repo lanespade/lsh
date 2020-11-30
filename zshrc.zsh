@@ -1,5 +1,5 @@
 #!/bin/zsh
-set -Eeuo pipefail
+set -Eeuxo pipefail
 
 echo 'Installing zsh-autosuggestions'
 ZSH_AUTOSUGGESTIONS_PLUGIN_DIR=~/.zsh/zsh-autosuggestions
@@ -12,12 +12,12 @@ rm -rf $FZF_TAB_PLUGIN_DIR
 git clone --depth 1 https://github.com/Aloxaf/fzf-tab $FZF_TAB_PLUGIN_DIR
 
 echo 'Installing forgit'
-FORGIT_PLUGIN_DIR=~/zsh/forgit
+FORGIT_PLUGIN_DIR=~/.zsh/forgit
 rm -rf $FORGIT_PLUGIN_DIR
 git clone --depth 1 https://github.com/wfxr/forgit.git $FORGIT_PLUGIN_DIR
 
 echo 'Installing zsh-syntax-highlighting'
-ZSH_SYNTAX_HIGHLIGHTING_PLUGIN_DIR
+ZSH_SYNTAX_HIGHLIGHTING_PLUGIN_DIR=~/.zsh/zsh-syntax-highlighting
 rm -rf $ZSH_SYNTAX_HIGHLIGHTING_PLUGIN_DIR
 git clone --depth 1 https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_SYNTAX_HIGHLIGHTING_PLUGIN_DIR
 
