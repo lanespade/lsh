@@ -15,4 +15,4 @@ echo 'Configuring brews'
 $(brew --prefix)/opt/fzf/install --all
 
 echo 'Installing casks'
-brew cask reinstall font-fira-code
+brew reinstall homebrew/cask-fonts/font-fira-code
