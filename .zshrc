@@ -7,26 +7,28 @@ source ~/.zsh/zsh-nvm/zsh-nvm.plugin.zsh
 autoload -U promptinit; promptinit
 prompt spaceship
 
-# Auto Suggestions
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+# Command Completion
+autoload -U +X compinit && compinit
+autoload -U +X bashcompinit && bashcompinit
+complete -C '/usr/local/bin/aws_completer' aws
 
 # FZF
 project_or_current_dir() {
 	git rev-parse --show-toplevel 2> /dev/null || pwd
 }
 
-FZF_PREVIEW_DEFAULTS='--bind left:preview-page-up,right:preview-page-down --preview-window up:99%'
+FZF_PREVIEW_DEFAULTS="--bind left:preview-page-up,right:preview-page-down --preview-window up:99%"
 export FZF_ALT_C_COMMAND="fd --type d . $HOME"
 export FZF_ALT_C_OPTS="$FZF_PREVIEW_DEFAULTS --preview 'tree -C {}'"
 
-export FZF_DEFAULT_COMMAND="fd --type f --hidden . $(project_or_current_dir)"
+export FZF_DEFAULT_COMMAND="fd --type f --hidden . '$(project_or_current_dir)'"
 export FZF_DEFAULT_OPTS="--layout default --info inline --multi"
 
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_CTRL_T_OPTS="--no-height $FZF_PREVIEW_DEFAULTS --preview 'bat --color always --style full --line-range 1: {}'"
 
 function chpwd() {
-    export FZF_DEFAULT_COMMAND="fd --type f --hidden . $(project_or_current_dir)"
+    export FZF_DEFAULT_COMMAND="fd --type f --hidden . '$(project_or_current_dir)'"
     export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 }
 
@@ -34,6 +36,7 @@ function chpwd() {
 
 # FZF Completion
 source ~/.zsh/fzf-tab/fzf-tab.plugin.zsh
+zstyle ':fzf-tab:*' fzf-bindings 'tab:toggle+down,btab:up+toggle'
 
 # Interactive Git (via FZF)
 source ~/.zsh/forgit/forgit.plugin.zsh
@@ -96,6 +99,9 @@ fkill() {
 
 zle -N fkill
 bindkey '^x' fkill
+
+# Auto Suggestions
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # ZSH Syntax Highlighting
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
