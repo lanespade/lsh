@@ -10,6 +10,7 @@ brew reinstall ripgrep
 brew reinstall fd
 brew reinstall bat
 brew reinstall tree
+brew reinstall spaceship
 
 echo 'Configuring brews'
 $(brew --prefix)/opt/fzf/install --all

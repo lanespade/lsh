@@ -14,6 +14,3 @@ source $ZSH_NVM_PLUGIN_DIR/zsh-nvm.plugin.zsh
 
 echo 'Installing npm'
 nvm install
-
-echo 'Installing global packages'
-npm i -fg spaceship-prompt
