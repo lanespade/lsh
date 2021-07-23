@@ -8,9 +8,9 @@ A minimal, effective shell environment
 
 **Warning**
 
-The following will install nvm, LTS npm, npm packages, homebrew, homebrews, homebrew casks, clone zsh plugins into `~/.zsh/`, and will replace `~/.zshrc`, `~/.ignore`, and `~/.nvmrc` without asking.
+The following will install nvm, 'stable' npm, homebrew, homebrews, homebrew casks, clone zsh plugins into `~/.zsh/`, and will replace `~/.zshrc`, `~/.ignore`, and `~/.nvmrc` without asking.
 
-## Install Dependencies
+## Run Installation
 
 ```
 git clone https://github.com/lanespade/lsh.git
@@ -27,26 +27,27 @@ rm -rf lsh
 # Installation Breakdown (install.zsh)
 
 ## brew.zsh
-Installs Homebrew and the following...
-* brews
-	* **[fzf](https://github.com/junegunn/fzf)** - fuzzy finder, an incredibly powerful tool, the bedrock of my environment
-	* **[ripgrep](https://github.com/BurntSushi/ripgrep)** - faster `grep` that respects `~/.ignore` and `.gitignore` files
-	* **[fd](https://github.com/sharkdp/fd)** - faster `find` that respects `~/.ignore` and `.gitignore` files
-	* **[bat](https://github.com/sharkdp/bat)** - `cat` with syntax highlighting, useful for previewing contents with `fzf`
-	* **tree** - recursive `ls` with depth-indentation, useful for navigating with `fzf`
-* casks
-	* **[font-fira-code](https://github.com/tonsky/FiraCode)** - support for [spaceship-prompt](https://github.com/denysdovhan/spaceship-prompt)
+* Installs Homebrew 
+* Installs the following brews
+	* **[fzf](https://github.com/junegunn/fzf)** - command-line fuzzy finder
+	* **[ripgrep](https://github.com/BurntSushi/ripgrep)** - recursively searches directories for a regex pattern while respecting your gitignore
+	* **[fd](https://github.com/sharkdp/fd)** - simple, fast and user-friendly alternative to 'find'
+	* **[bat](https://github.com/sharkdp/bat)** - cat(1) clone with wings.
+	* **tree** - list contents of directories in a tree-like format
+    * **[spaceship](https://github.com/spaceship-prompt/spaceship-prompt)** - minimalistic, powerful and extremely customizable Zsh prompt
+* Installs the following casks
+	* **[font-fira-code](https://github.com/tonsky/FiraCode)** - monospaced font with programming ligatures
 
 ## ignore.zsh
-Copies `.ignore` under the home directory (used by `rg` and `fd`)
+* Copies `.ignore` under the home directory (used by `rg` and `fd`)
 
 ## npm.zsh
-Installs NVM (via **[zsh-nvm](https://github.com/lukechilds/zsh-nvm)**), resets ~/.nvmrc to stable, and installs the following...
-* global packages
-	* **[spaceship-prompt](https://github.com/denysdovhan/spaceship-prompt)**, a minimal, beautiful prompt with git integration
+* Installs NVM (via **[zsh-nvm](https://github.com/lukechilds/zsh-nvm)**)
+* Sets ~/.nvmrc to 'stable'
 
 ## zshrc.zsh
-Copies `.zshrc` under the home directory and sources it
+* Copies `.zshrc` under the home directory
+* Sources it
 
 # Shell Breakdown (.zshrc)
 
@@ -66,7 +67,7 @@ Opinionated, minimal configuration of the `fzf` keybindings, Alt-C, Ctrl-R, and 
 Finds directory to change to by name, starting at the home directory using `fd` while previewing contents using `tree`
 
 ### Ctrl-T
-Finds file by name, starting in either the current project's root directory or home directory (if not in a project) using `fd` in fullscreen mode while previewing contents using `bat`
+Finds file by name, starting in the current directory using `fd` in fullscreen mode while previewing contents using `bat`
 
 ## # FZF Tab
 Enables `fzf` fuzzy filtering for all tab completions, immensely powerful
