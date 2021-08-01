@@ -12,3 +12,6 @@ zsh npm.zsh
 
 echo '==== zshrc ===='
 zsh zshrc.zsh
+
+echo '==== terminal ===='
+zsh terminal.zsh

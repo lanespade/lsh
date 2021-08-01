@@ -1,5 +1,4 @@
 # NVM
-export NVM_AUTO_USE=true
 export NVM_COMPLETION=true
 source ~/.zsh/zsh-nvm/zsh-nvm.plugin.zsh
 
@@ -10,7 +9,6 @@ prompt spaceship
 # Command Completion
 autoload -U +X compinit && compinit
 autoload -U +X bashcompinit && bashcompinit
-complete -C '/usr/local/bin/aws_completer' aws
 
 # FZF
 FZF_PREVIEW_DEFAULTS='--bind left:preview-page-up,right:preview-page-down --preview-window up:99%'
