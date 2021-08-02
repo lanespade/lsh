@@ -36,8 +36,8 @@ Running `./install.zsh` will...
 
 ```
 git clone https://github.com/lanespade/lsh.git
-./lsh/install.zsh
-rm -rf lsh
+cd lsh
+./install.zsh
 ```
 
 # Shell Breakdown (.zshrc)
