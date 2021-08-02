@@ -3,9 +3,9 @@
 ## Disclaimer
 This is only tested on the latest macOS
 
-## `./install.zsh`
+## [install.zsh](https://github.com/lanespade/lsh/blob/master/install.zsh)
 
-### `./brew.zsh`
+### [brew.zsh](https://github.com/lanespade/lsh/blob/master/brew.zsh)
 * Reinstalls homebrew
 * Reinstalls the following brews...
 	* **[fzf](https://github.com/junegunn/fzf)**
@@ -16,15 +16,15 @@ This is only tested on the latest macOS
 * Reinstalls the following casks...
 	* **[font-fira-code](https://github.com/tonsky/FiraCode)**
 
-### `./ignore.zsh`
+### [ignore.zsh](https://github.com/lanespade/lsh/blob/master/ignore.zsh)
 * Creates / replaces `~/.ignore`
 
-### `./npm.zsh`
+### [npm.zsh](https://github.com/lanespade/lsh/blob/master/npm.zsh)
 * Reinstalls `nvm` (via zsh-nvm)
 * Creates / replaces `~/.nvmrc` with 'stable'
 * Installs `npm`
 
-### `./zshrc.zsh`
+### [zshrc.zsh](https://github.com/lanespade/lsh/blob/master/zshrc.zsh)
 * Reinstalls the following plugins into `~/.zsh/`...
 	* **[zsh-nvm](https://github.com/lukechilds/zsh-nvm)**
 	* **[spaceship](https://github.com/spaceship-prompt/spaceship-prompt)** ([issue](https://github.com/spaceship-prompt/spaceship-prompt/issues/1057) requires manually installing, will switch to brew when it is fixed)
@@ -34,7 +34,7 @@ This is only tested on the latest macOS
 	* **[zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)**
 * Creates / replaces `~/.zshrc`
 
-### `./terminal.zsh`
+### [terminal.zsh](https://github.com/lanespade/lsh/blob/master/terminal.zsh)
 * Replace `~/Library/Preferences/com.apple.Terminal.plist` in order to...
 	* Default to Homebrew
 	* Switch to Fira Code Light font
@@ -43,7 +43,7 @@ This is only tested on the latest macOS
 ## tl;dr
 
 ```
-git clone https://github.com/lanespade/lsh.git
+git clone --depth 1 https://github.com/lanespade/lsh.git
 cd lsh
 ./install.zsh
 ```
