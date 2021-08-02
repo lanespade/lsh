@@ -1,5 +1,5 @@
 #!/bin/zsh
-set -Eeuxo pipefail
+set -Eeuo pipefail
 
 echo 'Installing homebrew'
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -15,7 +15,10 @@ brew reinstall ripgrep
 brew reinstall fd
 brew reinstall bat
 brew reinstall tree
-brew reinstall spaceship
+
+# Need to manually install until the following is fixed
+# https://github.com/spaceship-prompt/spaceship-prompt/issues/1057
+# brew reinstall spaceship
 
 echo 'Configuring brews'
 $(brew --prefix)/opt/fzf/install --all

@@ -1,5 +1,12 @@
 #!/bin/zsh
-set -Eeuxo pipefail
+set -Eeuo pipefail
+
+echo 'Installing spaceship'
+SPACESHIP_PROMPT_DIR=~/.zsh/spaceship
+rm -rf $SPACESHIP_PROMPT_DIR
+git clone --depth 1 https://github.com/spaceship-prompt/spaceship-prompt.git $SPACESHIP_PROMPT_DIR
+mkdir -p ~/.zfunctions
+ln -sf $SPACESHIP_PROMPT_DIR/spaceship.zsh ~/.zfunctions/prompt_spaceship_setup
 
 echo 'Installing zsh-autosuggestions'
 ZSH_AUTOSUGGESTIONS_PLUGIN_DIR=~/.zsh/zsh-autosuggestions
