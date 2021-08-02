@@ -6,9 +6,6 @@ This is only tested on the latest macOS
 # Installation Warning
 
 Running `./install.zsh` will...
-* Reinstall `nvm` (via zsh-nvm)
-* Create / replace `~/.nvmrc` with 'stable'
-* Install stable `npm`
 * Reinstall homebrew
 * Reinstall the following brews...
 	* **[fzf](https://github.com/junegunn/fzf)**
@@ -16,12 +13,15 @@ Running `./install.zsh` will...
 	* **[fd](https://github.com/sharkdp/fd)**
 	* **[bat](https://github.com/sharkdp/bat)**
 	* **[tree](https://en.wikipedia.org/wiki/Tree_(command))**
-    * **[spaceship](https://github.com/spaceship-prompt/spaceship-prompt)**
 * Reinstall the following casks...
 	* **[font-fira-code](https://github.com/tonsky/FiraCode)**
 * Create / replace `~/.ignore`
+* Reinstall `nvm` (via zsh-nvm)
+* Create / replace `~/.nvmrc` with 'stable'
+* Install `npm`
 * Reinstall the following zsh plugins into `~/.zsh/`...
 	* **[zsh-nvm](https://github.com/lukechilds/zsh-nvm)**
+	* **[spaceship](https://github.com/spaceship-prompt/spaceship-prompt)** ([issue](https://github.com/spaceship-prompt/spaceship-prompt/issues/1057) requires manually installing, will switch to brew when it is fixed)
 	* **[zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)**
 	* **[fzf-tab](https://github.com/Aloxaf/fzf-tab)**
 	* **[forgit](https://github.com/wfxr/forgit)**
@@ -32,7 +32,7 @@ Running `./install.zsh` will...
 	* Switch to Fira Code Light font
 	* Enable "Use option as Meta Key"
 
-## Run Installation
+# tl;dr Install
 
 ```
 git clone https://github.com/lanespade/lsh.git
