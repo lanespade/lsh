@@ -1,38 +1,46 @@
-A minimal, effective shell environment
+# Installation
 
-# Disclaimer
+## Disclaimer
 This is only tested on the latest macOS
 
-# Installation Warning
+## `./install.zsh`
 
-Running `./install.zsh` will...
-* Reinstall homebrew
-* Reinstall the following brews...
+### `./brew.zsh`
+* Reinstalls homebrew
+* Reinstalls the following brews...
 	* **[fzf](https://github.com/junegunn/fzf)**
 	* **[ripgrep](https://github.com/BurntSushi/ripgrep)**
 	* **[fd](https://github.com/sharkdp/fd)**
 	* **[bat](https://github.com/sharkdp/bat)**
 	* **[tree](https://en.wikipedia.org/wiki/Tree_(command))**
-* Reinstall the following casks...
+* Reinstalls the following casks...
 	* **[font-fira-code](https://github.com/tonsky/FiraCode)**
-* Create / replace `~/.ignore`
-* Reinstall `nvm` (via zsh-nvm)
-* Create / replace `~/.nvmrc` with 'stable'
-* Install `npm`
-* Reinstall the following zsh plugins into `~/.zsh/`...
+
+### `./ignore.zsh`
+* Creates / replaces `~/.ignore`
+
+### `./npm.zsh`
+* Reinstalls `nvm` (via zsh-nvm)
+* Creates / replaces `~/.nvmrc` with 'stable'
+* Installs `npm`
+
+### `./zshrc.zsh`
+* Reinstalls the following plugins into `~/.zsh/`...
 	* **[zsh-nvm](https://github.com/lukechilds/zsh-nvm)**
 	* **[spaceship](https://github.com/spaceship-prompt/spaceship-prompt)** ([issue](https://github.com/spaceship-prompt/spaceship-prompt/issues/1057) requires manually installing, will switch to brew when it is fixed)
 	* **[zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)**
 	* **[fzf-tab](https://github.com/Aloxaf/fzf-tab)**
 	* **[forgit](https://github.com/wfxr/forgit)**
 	* **[zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)**
-* Create / replace `~/.zshrc`
+* Creates / replaces `~/.zshrc`
+
+### `./terminal.zsh`
 * Replace `~/Library/Preferences/com.apple.Terminal.plist` in order to...
 	* Default to Homebrew
 	* Switch to Fira Code Light font
 	* Enable "Use option as Meta Key"
 
-# tl;dr Install
+## tl;dr
 
 ```
 git clone https://github.com/lanespade/lsh.git
