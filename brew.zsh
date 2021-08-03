@@ -6,7 +6,7 @@ echo 'Installing homebrew'
 
 echo 'Adding homebrew to PATH'
 LINE='eval "$(/opt/homebrew/bin/brew shellenv)"'
-grep -xF $LINE  ~/.zprofile || echo $LINE >> ~/.zprofile
+grep -xqF $LINE  ~/.zprofile || echo $LINE >> ~/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 echo 'Installing brews'

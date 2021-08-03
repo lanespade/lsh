@@ -34,11 +34,10 @@ Running `./install.zsh` will...
 
 ## Run Installation
 
-```
-git clone https://github.com/lanespade/lsh.git
-cd lsh
-./install.zsh
-```
+1. `git clone https://github.com/lanespade/lsh.git`
+1. `cd lsh`
+1. `./install.zsh`
+1. Logout and log back in
 
 # Shell Breakdown (.zshrc)
 
