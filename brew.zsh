@@ -27,4 +27,4 @@ echo 'Tapping casks'
 brew tap homebrew/cask-fonts
 
 echo 'Installing casks'
-brew reinstall homebrew/cask-fonts/font-fira-code
+brew install homebrew/cask-fonts/font-fira-code

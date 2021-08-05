@@ -6,14 +6,14 @@ This is only tested on the latest macOS
 ## [install.zsh](https://github.com/lanespade/lsh/blob/master/install.zsh)
 
 ### [brew.zsh](https://github.com/lanespade/lsh/blob/master/brew.zsh)
-* Reinstalls homebrew
+* Installs homebrew
 * Reinstalls the following brews...
 	* **[fzf](https://github.com/junegunn/fzf)**
 	* **[ripgrep](https://github.com/BurntSushi/ripgrep)**
 	* **[fd](https://github.com/sharkdp/fd)**
 	* **[bat](https://github.com/sharkdp/bat)**
 	* **[tree](https://en.wikipedia.org/wiki/Tree_(command))**
-* Reinstalls the following casks...
+* Installs the following casks...
 	* **[font-fira-code](https://github.com/tonsky/FiraCode)**
 
 ### [ignore.zsh](https://github.com/lanespade/lsh/blob/master/ignore.zsh)
