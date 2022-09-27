@@ -3,7 +3,7 @@ export NVM_COMPLETION=true
 source ~/.zsh/zsh-nvm/zsh-nvm.plugin.zsh
 
 # Custom Prompt
-fpath=( "$HOME/.zfunctions" $fpath )
+source "$(brew --prefix)/opt/spaceship/spaceship.zsh"
 autoload -U promptinit; promptinit
 prompt spaceship
 
