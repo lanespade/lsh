@@ -1,7 +1,7 @@
 # Installation
 
 ## Disclaimer
-This is only tested on the latest macOS
+This is only tested on the latest **M1** macOS
 
 ## [install.zsh](https://github.com/lanespade/lsh/blob/master/install.zsh)
 
