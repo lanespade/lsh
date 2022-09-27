@@ -15,10 +15,7 @@ brew reinstall ripgrep
 brew reinstall fd
 brew reinstall bat
 brew reinstall tree
-
-# Need to manually install until the following is fixed
-# https://github.com/spaceship-prompt/spaceship-prompt/issues/1057
-# brew reinstall spaceship
+brew reinstall spaceship
 
 echo 'Configuring brews'
 $(brew --prefix)/opt/fzf/install --all
@@ -27,4 +24,4 @@ echo 'Tapping casks'
 brew tap homebrew/cask-fonts
 
 echo 'Installing casks'
-brew install homebrew/cask-fonts/font-fira-code
+brew reinstall homebrew/cask-fonts/font-fira-code

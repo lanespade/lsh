@@ -27,7 +27,7 @@ This is only tested on the latest macOS
 ### [zshrc.zsh](https://github.com/lanespade/lsh/blob/master/zshrc.zsh)
 * Reinstalls the following plugins into `~/.zsh/`...
 	* **[zsh-nvm](https://github.com/lukechilds/zsh-nvm)**
-	* **[spaceship](https://github.com/spaceship-prompt/spaceship-prompt)** ([issue](https://github.com/spaceship-prompt/spaceship-prompt/issues/1057) requires manually installing, will switch to brew when it is fixed)
+	* **[spaceship](https://github.com/spaceship-prompt/spaceship-prompt)** 
 	* **[zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)**
 	* **[fzf-tab](https://github.com/Aloxaf/fzf-tab)**
 	* **[forgit](https://github.com/wfxr/forgit)**
