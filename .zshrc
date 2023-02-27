@@ -4,8 +4,6 @@ source ~/.zsh/zsh-nvm/zsh-nvm.plugin.zsh
 
 # Custom Prompt
 source "$(brew --prefix)/opt/spaceship/spaceship.zsh"
-autoload -U promptinit; promptinit
-prompt spaceship
 
 # Completion
 autoload -U +X compinit && compinit

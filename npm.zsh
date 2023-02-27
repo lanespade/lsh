@@ -10,8 +10,8 @@ rm -rf $ZSH_NVM_PLUGIN_DIR
 git clone --depth 1 https://github.com/lukechilds/zsh-nvm.git $ZSH_NVM_PLUGIN_DIR
 source $ZSH_NVM_PLUGIN_DIR/zsh-nvm.plugin.zsh
 
-echo 'Configuring ~/.nvmrc'
-echo 'stable' > ~/.nvmrc
+echo 'Copying .nvmrc'
+cp $(dirname $0)/.nvmrc $HOME/.nvmrc
 
 echo 'Installing npm'
 nvm install
